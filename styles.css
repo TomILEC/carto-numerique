@@ -1,0 +1,220 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #b31b1b; /* Rouge */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap; /* Pour permettre plusieurs lignes de boutons */
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Couleurs spécifiques pour chaque catégorie */
+.btn-tous {
+  background-color: #607d8b; /* Gris */
+}
+
+.btn-gouvernement {
+  background-color: #1a237e; /* Bleu foncé */
+}
+
+.btn-parlement {
+  background-color: #64b5f6; /* Bleu clair */
+}
+
+.btn-administration {
+  background-color: #ff9800; /* Orange */
+}
+
+.btn-parties-prenantes {
+  background-color: #ffeb3b; /* Jaune */
+  color: black; /* Texte noir pour contraste */
+}
+
+.btn-leaders-opinion {
+  background-color: #9c27b0; /* Violet */
+}
+
+.btn-medias {
+  background-color: #4caf50; /* Vert */
+}
+
+/* Couleur unique pour les thématiques */
+.btn-thematique {
+  background-color: #00897b; /* Teal foncé */
+}
+
+.btn-favoris {
+  background-color: #b31b1b; /* Rouge */
+  color: white; /* Texte blanc pour contraste */
+}
+
+/* Styles pour le contenu */
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+  width: 30%; /* Largeur de 30% pour avoir jusqu'à 3 colonnes */
+  box-sizing: border-box; /* Inclure padding et border dans la largeur */
+  text-align: center; /* Centrer le contenu */
+}
+
+.item img {
+  max-width: 100px; /* Limiter la taille de l'image */
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto; /* Centrer et espacer l'image */
+  border-radius: 50%; /* Rendre l'image circulaire */
+}
+
+footer {
+  background-color: #b31b1b; /* Rouge */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Styles pour l'impression */
+@media print {
+  .item {
+    page-break-inside: avoid; /* Empêche les éléments d'être coupés entre deux pages */
+    width: 100%; /* Utiliser toute la largeur disponible pour éviter les coupures */
+  }
+
+  .item img {
+    max-width: 100px; /* Limiter la taille de l'image à l'impression */
+    height: auto;
+    margin: 0 auto; /* Centrer l'image */
+  }
+
+  #menu, header, footer {
+    display: none; /* Cache les éléments de navigation et d'entête/pied de page pour l'impression */
+  }
+
+  body {
+    margin: 0; /* Supprime les marges pour maximiser l'utilisation de l'espace */
+    padding: 1cm; /* Ajoute un peu de padding pour le confort visuel */
+    box-shadow: none;
+  }
+
+  #content {
+    display: block; /* Affiche le contenu normalement */
+  }
+}
+
+/* Styles pour les bandeaux de catégorie */
+.category-tous::before {
+  content: 'Tous les acteurs';
+  display: block;
+  background-color: #607d8b; /* Gris */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-gouvernement::before {
+  content: 'Gouvernement';
+  display: block;
+  background-color: #1a237e; /* Bleu foncé */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-parlement::before {
+  content: 'Parlement';
+  display: block;
+  background-color: #64b5f6; /* Bleu clair */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-administration::before {
+  content: 'Administration';
+  display: block;
+  background-color: #ff9800; /* Orange */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-parties-prenantes::before {
+  content: 'Parties prenantes';
+  display: block;
+  background-color: #ffeb3b; /* Jaune */
+  color: black; /* Texte noir pour contraste */
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-leaders-opinion::before {
+  content: 'Leaders d\'opinion';
+  display: block;
+  background-color: #9c27b0; /* Violet */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-medias::before {
+  content: 'Médias';
+  display: block;
+  background-color: #4caf50; /* Vert */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-innovation-et-technologies-avancees::before,
+.category-economie-numerique-et-finances::before,
+.category-transformation-et-inclusion-numerique::before,
+.category-politique-et-regulation-numerique::before,
+.category-recherche-et-developpement::before,
+.category-souverainete-et-securite-numeriques::before {
+  content: 'Thématique';
+  display: block;
+  background-color: #00897b; /* Teal foncé */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category-favoris::before {
+  content: 'Favoris';
+  display: block;
+  background-color: #b31b1b; /* Rouge */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

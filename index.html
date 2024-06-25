@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte Interactive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  Carte Interactive des Acteurs Numériques
+</header>
+<div id="menu">
+  <button onclick="filterCategory('Tous')" class="btn-tous">Tous les acteurs</button>
+  <button onclick="filterCategory('Favoris')" class="btn-favoris">Favoris</button>
+  <button onclick="filterCategory('Gouvernement')" class="btn-gouvernement">Gouvernement</button>
+  <button onclick="filterCategory('Parlement')" class="btn-parlement">Parlement</button>
+  <button onclick="filterCategory('Administration')" class="btn-administration">Administration</button>
+  <button onclick="filterCategory('Parties prenantes')" class="btn-parties-prenantes">Parties prenantes</button>
+  <button onclick="filterCategory('Leaders d\'opinion')" class="btn-leaders-opinion">Leaders d'opinion</button>
+  <button onclick="filterCategory('Médias')" class="btn-medias">Médias</button>
+  <button onclick="filterCategory('Innovation et Technologies Avancées')" class="btn-thematique">Innovation et Technologies Avancées</button>
+  <button onclick="filterCategory('Économie Numérique et Finances')" class="btn-thematique">Économie Numérique et Finances</button>
+  <button onclick="filterCategory('Transformation et Inclusion Numérique')" class="btn-thematique">Transformation et Inclusion Numérique</button>
+  <button onclick="filterCategory('Politique et Régulation Numérique')" class="btn-thematique">Politique et Régulation Numérique</button>
+  <button onclick="filterCategory('Recherche et Développement')" class="btn-thematique">Recherche et Développement</button>
+  <button onclick="filterCategory('Souveraineté et Sécurité Numériques')" class="btn-thematique">Souveraineté et Sécurité Numériques</button>
+</div>
+<div id="content" class="category-tous"></div>
+<footer>
+  &copy; 2024 Ilec. Tous droits réservés.
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
